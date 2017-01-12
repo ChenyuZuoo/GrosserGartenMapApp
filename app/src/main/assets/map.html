@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Custom Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+<div id='map'></div>
+<script>
+    var map = L.map('map', {
+      center: [51.0380304, 13.7567629],
+      zoom: 15
+    });
+    var myIcon = L.icon({
+      iconUrl: 'star.png',
+      iconAnchor: [12, 12],
+      popupAnchor: [0, -12]
+    });
+
+    L.marker([51.037338, 13.754657], {
+        icon: myIcon
+      })
+      .addTo(map)
+      .bindPopup("<b>Zoo Dresden</b>")
+      .on('click', clickCenter);
+
+    function clickCenter(e) {
+      map.setView(e.target.getLatLng(), map.getZoom());
+    }
+
+    L.marker([51.037852, 13.762861], {
+        icon: myIcon
+      })
+      .addTo(map)
+      .bindPopup("<b>Palais Großer Garten</b>")
+      .on('click', clickCenter);
+
+    L.marker([51.044998, 13.756125], {
+        icon: myIcon
+      })
+      .addTo(map)
+      .bindPopup("<b>Gläserne Manufaktur</b>")
+      .on('click', clickCenter);
+
+    L.marker([51.043626, 13.758460], {
+        icon: myIcon
+      })
+      .addTo(map)
+      .bindPopup("<b>Botanischer Garten</b>")
+      .on('click', clickCenter);
+
+
+    L.marker([51.032363, 13.770821], {
+        icon: myIcon
+      })
+      .addTo(map)
+      .bindPopup("<b>Junge Garde</b>")
+      .on('click', clickCenter);
+
+    var circleOptions = {
+      color: '#f07910',
+      fillcolor: '#ff00dc',
+      weight: 3,
+      opacity: 1
+    };
+    L.circle([48.12855, 13.123903], 50, circleOptions).addTo(map);
+    L.tileLayer(
+      'https://api.mapbox.com/styles/v1/judoulu/cixug0rcu00642rplxvn6k4nk/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoianVkb3VsdSIsImEiOiJjaWh6ZG84c2cwMGRvd2hrcGh1ZjhndWw2In0.gP1U_CoO0-xZ2jb11h5Cgw', {
+        id: 'mapbox.streets'
+      }).addTo(map);
+  </script>
+</body>
+
+</html>
