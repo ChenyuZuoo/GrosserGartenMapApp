@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">GartenMap</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="text_gallery">Gallery</string>
+    <string name="text_map">Map</string>
+    <string name="text_about">About</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
