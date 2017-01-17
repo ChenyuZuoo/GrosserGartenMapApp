@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_gallery"
+        android:enabled="true"
+        android:icon="@drawable/ic_gallery_white_24dp"
+        android:title="@string/text_gallery" />
+    <item
+        android:id="@+id/action_map"
+        android:enabled="true"
+        android:icon="@drawable/ic_map_on_white_24dp"
+        android:title="@string/text_map"/>
+    <item
+        android:id="@+id/action_about"
+        android:enabled="true"
+        android:icon="@drawable/ic_about_white_24dp"
+        android:title="@string/text_about"/>
+</menu>
+
