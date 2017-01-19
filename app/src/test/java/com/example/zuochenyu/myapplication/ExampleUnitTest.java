@@ -1,4 +1,4 @@
-package com.example.s4793523.gartenmap;
+package com.example.zuochenyu.myapplication;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.s4793523.gartenmap;
+package com.example.zuochenyu.myapplication;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -19,20 +19,23 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frameLayout, MapFragment.newInstance());
         fragmentTransaction.commit();
 
-        bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment = null;
                 switch (item.getItemId()) {
-                    case R.id.menu_dialer:
+                    case R.id.action_map:
                         fragment = MapFragment.newInstance();
+                        System.out.println("here is main activity, map item selected");
                         break;
-                    case R.id.menu_email:
-                        fragment = ItemFragment.newInstance();
+                    case R.id.action_gallery:
+                        fragment = GalleryFragment.newInstance();
+                        System.out.println("here is main activity, gallery item selected");
                         break;
-                    case R.id.menu_map:
+                    case R.id.action_about:
                         fragment = AboutFragment.newInstance();
+                        System.out.println("here is main activity, about item selected");
                         break;
                 }
                 if (fragment != null) {

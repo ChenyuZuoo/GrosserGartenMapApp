@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.s4793523.gartenmap.MapFragment">
+    tools:context="com.example.zuochenyu.myapplication.MapFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <WebView
@@ -10,5 +10,10 @@
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/frag_text"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
 
 </FrameLayout>

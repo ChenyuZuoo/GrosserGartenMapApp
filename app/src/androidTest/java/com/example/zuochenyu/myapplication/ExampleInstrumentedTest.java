@@ -1,4 +1,4 @@
-package com.example.s4793523.gartenmap;
+package com.example.zuochenyu.myapplication;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.s4793523.gartenmap", appContext.getPackageName());
+        assertEquals("com.example.zuochenyu.myapplication", appContext.getPackageName());
     }
 }
