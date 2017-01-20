@@ -30,14 +30,35 @@
       center: [51.0380304, 13.7567629],
       zoom: 15
     });
-    var myIcon = L.icon({
-      iconUrl: 'star.png',
+
+    var CastleIcon = L.icon({
+      iconUrl: 'icon_Castle.png',
+      iconAnchor: [12, 12],
+      popupAnchor: [0, -12]
+    });
+    var FactoryIcon = L.icon({
+      iconUrl: 'icon_Factory.png',
+      iconAnchor: [12, 12],
+      popupAnchor: [0, -12]
+    });
+    var GardenIcon = L.icon({
+      iconUrl: 'icon_Garden.png',
+      iconAnchor: [12, 12],
+      popupAnchor: [0, -12]
+    });
+    var JungeGartenIcon = L.icon({
+      iconUrl: 'icon_JungeGarten.png',
+      iconAnchor: [12, 12],
+      popupAnchor: [0, -12]
+    });
+    var ZooIcon = L.icon({
+      iconUrl: 'icon_Zoo.png',
       iconAnchor: [12, 12],
       popupAnchor: [0, -12]
     });
 
     L.marker([51.037338, 13.754657], {
-        icon: myIcon
+        icon: ZooIcon
       })
       .addTo(map)
       .bindPopup("<b>Zoo Dresden</b>")
@@ -48,21 +69,21 @@
     }
 
     L.marker([51.037852, 13.762861], {
-        icon: myIcon
+        icon: CastleIcon
       })
       .addTo(map)
       .bindPopup("<b>Palais Großer Garten</b>")
       .on('click', clickCenter);
 
     L.marker([51.044998, 13.756125], {
-        icon: myIcon
+        icon: FactoryIcon
       })
       .addTo(map)
       .bindPopup("<b>Gläserne Manufaktur</b>")
       .on('click', clickCenter);
 
     L.marker([51.043626, 13.758460], {
-        icon: myIcon
+        icon: GardenIcon
       })
       .addTo(map)
       .bindPopup("<b>Botanischer Garten</b>")
@@ -70,7 +91,7 @@
 
 
     L.marker([51.032363, 13.770821], {
-        icon: myIcon
+        icon: JungeGartenIcon
       })
       .addTo(map)
       .bindPopup("<b>Junge Garde</b>")
