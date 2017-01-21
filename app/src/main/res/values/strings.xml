@@ -8,4 +8,20 @@
     <string name="hello_blank_fragment">Hello about fragment</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
 
+    <string name="about_title">
+    About the app
+</string>
+<string name="about_author">
+    This app is designed to show a detailed information map of Großer Garten in Dresden,
+    which is a group project for the course "Mobile Cartography" at TU Dresden.\n \nAuthors of this Android application: \nChenyu ZUO  \nNevil JOSE  \nJunyan LI \n  </string>
+<string name="about_sources">
+    Source:
+</string>
+<string name="about_sourcetext">
+    Icons sources: icons8 \nUrl: https://icons8.com \nLicense: CC BY-ND 3.0 \nInformation sources: Wikipedia \nUrl:https://en.wikipedia.org/wiki\nLicense: CC BY-SA 3.0\n
+</string>
+<string name="about_updateversion">
+    Last Update: 22-01-2017 \nVersion: 1.0.1
+</string>
+
 </resources>
