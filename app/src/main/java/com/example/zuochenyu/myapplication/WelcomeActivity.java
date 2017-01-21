@@ -31,9 +31,11 @@ public class WelcomeActivity extends AppCompatActivity {
                 } finally {
                     Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         };
         timerThread.start();
     }
+
 }
