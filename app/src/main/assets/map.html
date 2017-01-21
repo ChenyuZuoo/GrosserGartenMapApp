@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+
     <style>
     html,
     body {
@@ -24,12 +27,21 @@
 </head>
 
 <body>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.mapbox.css' rel='stylesheet' />
+<!--[if lt IE 9]>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.ie.css' rel='stylesheet' />
+<![endif]-->
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/css/font-awesome.min.css' rel='stylesheet' />
+
 <div id='map'></div>
 <script>
+
     var map = L.map('map', {
       center: [51.0380304, 13.7567629],
       zoom: 15
     });
+
 
     var CastleIcon = L.icon({
       iconUrl: 'icon_Castle.png',
@@ -108,6 +120,38 @@
       'https://api.mapbox.com/styles/v1/judoulu/cixug0rcu00642rplxvn6k4nk/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoianVkb3VsdSIsImEiOiJjaWh6ZG84c2cwMGRvd2hrcGh1ZjhndWw2In0.gP1U_CoO0-xZ2jb11h5Cgw', {
         id: 'mapbox.streets'
       }).addTo(map);
+
+    L.polygon([
+      [51.029904, 13.771179],
+      [51.036851, 13.778153],
+      [51.045753, 13.755631],
+      [51.045943, 13.754924],
+      [51.045851, 13.754848],
+      [51.045161, 13.754190],
+      [51.044943, 13.753878],
+      [51.039294, 13.748191],
+      [51.038961, 13.747766],
+      [51.038868, 13.747651],
+      [51.038681, 13.747355],
+      [51.038383, 13.746881],
+      [51.037618, 13.748618],
+      [51.037575, 13.748794],
+      [51.037538, 13.749007],
+      [51.037494, 13.749615],
+      [51.037458, 13.750398],
+      [51.037353, 13.751177],
+      [51.037349, 13.751194],
+      [51.037267, 13.751523],
+      [51.031931, 13.764826]
+    ]).addTo(map);
+
+
+    var lc = L.control.locate({
+    position: 'topright',
+    strings: {
+        title: "Show me where I am, yo!"
+    }
+    }).addTo(map);
   </script>
 </body>
 
