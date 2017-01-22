@@ -3,13 +3,18 @@
     <color name="colorPrimary">#036BA4</color>
     <color name="colorPrimaryDark">#036094</color>
     <color name="colorPrimaryLight">#0375B4</color>
+    <color name="carolinaBlue">#5EA7CF</color>
+    <color name="cyanBlue">#1981BA</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorText">#FFFFFF</color>
     <color name="colorIcon">#FFFFFF</color>
     <color name="white">#FFFFFF</color>
-    <!--<color name="test">#e1d9b7</color>-->
+    <color name="bottleGreen">#007849</color>
+    <color name="greenSheen">#73B59B</color>
+
+    <!--<color name="test">#308EC1</color>-->
     <!--<color name="test">#588E54</color>-->
     <!--<color name="test">#72b3c7</color>-->
-    <!--<color name="test">#f1c261</color>-->
+    <!--<color name="test">#73B59B</color>-->
 
 </resources>

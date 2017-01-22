@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#92ff00aa"
+            android:background="@color/cyanBlue"
             android:gravity="center_horizontal|center_vertical"
             android:text="TextView3"
             android:textColor="#ffffff"
@@ -53,7 +53,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
                 android:layout_below="@id/details_image"
-                android:background="#aaff00"
                 android:gravity="center_horizontal"
                 android:text="Description" />
 
