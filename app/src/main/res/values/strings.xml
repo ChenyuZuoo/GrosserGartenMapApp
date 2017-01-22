@@ -8,6 +8,9 @@
     <string name="hello_blank_fragment">Hello about fragment</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
 
+    <string name="db_table_name">info_table</string>
+
+
     <string name="about_title">
     About the app
 </string>
