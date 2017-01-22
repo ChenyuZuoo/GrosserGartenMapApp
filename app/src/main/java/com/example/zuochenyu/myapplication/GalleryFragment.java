@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/* This fragment shows an overview of the different places of interest */
 public class GalleryFragment extends ListFragment {
 
     SQLiteDatabase database = null;
@@ -27,20 +28,10 @@ public class GalleryFragment extends ListFragment {
     private SimpleCursorAdapter mListAdapter;
     private ListView mListView;
 
-    /*
-    // Attributes
-    private Context theContext;
-    private List<String> mResults;
-
-    // Elements
-
-//    TextView textView = (TextView) getView().findViewById(R.id.frag_text); */
-
     public static GalleryFragment newInstance() {
         return new GalleryFragment();
     }
 
-    // nothing needed to be done with onAttach method right now
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -53,6 +44,7 @@ public class GalleryFragment extends ListFragment {
         queryDataFromDatabase();
     }
 
+    /* Get details from the database */
     public void queryDataFromDatabase() {
         try {
             dbHelper.createDataBase();
@@ -62,29 +54,15 @@ public class GalleryFragment extends ListFragment {
         try {
             database = dbHelper.getDataBase();
             String dbTable = getString(R.string.db_table_name);
-            dbCursor = database.rawQuery("SELECT rowid _id,printf('image%d', id) as photoUri, * FROM " + dbTable + ";" , null);
-
-/*
-            while (dbCursor.isAfterLast() == false) {
-                String record = dbCursor.getString(index);
-                Log.d("garten_app",record );
-                list_values.add(record);
-                dbCursor.moveToNext();
-            }*/
+            dbCursor = database.rawQuery("SELECT rowid _id, * FROM " + dbTable + ";" , null);
 
         } finally {
-           /* if (database != null) {
-                dbHelper.close();
-            }*/
+
         }
-
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        System.out.println("here is gallery fragment OnCreate() method");
-
         return inflater.inflate(R.layout.fragment_gallery, container, false);
     }
 
@@ -95,12 +73,13 @@ public class GalleryFragment extends ListFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
 
-        // Setup the listAdapter
+        // Map the database name/name_de to TextView
+        // Map the database imageURI to an ImageView
         mListAdapter = new SimpleCursorAdapter(
                 getActivity().getApplicationContext(),
                 R.layout.list_item,
                 dbCursor,
-                new String[] { "name", "photoUri" },
+                new String[] { getString(R.string.db_col_name), "photoSmallURI" },
                 new int[] { R.id.ele1, R.id.smallImage }, 0
         );
 
@@ -120,7 +99,6 @@ public class GalleryFragment extends ListFragment {
 
         mListView = getListView();
         mListView.setAdapter(mListAdapter);
-
     }
 
     @Override
@@ -136,8 +114,7 @@ public class GalleryFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int pos, long id) {
-        //Toast.makeText(getActivity().getApplicationContext(), "CLICKED ON POS #" + pos + "!", Toast.LENGTH_SHORT).show();
-
+        /* Start the activity which shows the details, passing the rowid as a paramter */
         Intent intent = new Intent(getActivity(),  GalleryDetailsActivity.class);
         intent.putExtra("rowid", pos);
         startActivity(intent);

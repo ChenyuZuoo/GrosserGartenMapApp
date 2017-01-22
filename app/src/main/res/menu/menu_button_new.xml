@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapplication="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/gpsMenu"
+        myapplication:showAsAction="always"
+        android:title="@string/getGPSPosition"
+        android:icon="@drawable/gps128"/>
+
+
+
+</menu>

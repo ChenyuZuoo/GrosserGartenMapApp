@@ -27,13 +27,6 @@
 </head>
 
 <body>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.mapbox.css' rel='stylesheet' />
-<!--[if lt IE 9]>
-<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.ie.css' rel='stylesheet' />
-<![endif]-->
-<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/css/font-awesome.min.css' rel='stylesheet' />
-
 <div id='map'></div>
 <script>
 
@@ -41,7 +34,6 @@
       center: [51.0380304, 13.7567629],
       zoom: 15
     });
-
 
     var CastleIcon = L.icon({
       iconUrl: 'icon_Castle.png',
@@ -79,6 +71,11 @@
     function clickCenter(e) {
       map.setView(e.target.getLatLng(), map.getZoom());
     }
+
+    function setCenter(lat,lng) {
+	 //map.setView(new L.LatLng(lat, lng),  map.getZoom());
+	 map.panTo(new L.LatLng(lat, lng));
+	}
 
     L.marker([51.037852, 13.762861], {
         icon: CastleIcon
@@ -153,12 +150,6 @@
     }).addTo(map);
 
 
-    var lc = L.control.locate({
-    position: 'topright',
-    strings: {
-        title: "Show me where I am, yo!"
-    }
-    }).addTo(map);
   </script>
 </body>
 

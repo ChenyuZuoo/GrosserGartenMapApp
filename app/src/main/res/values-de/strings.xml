@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Großer Garten Karte</string>
+    <string name="about_author">Diese App ist eine Karte mit einer detaillierten Informationen von Großer Garten in Dresden, die ein Gruppenprojekt für den Kurs "Mobil Kartographie" an der TU Dresden ist.\n\nAutor: \nChenyu ZUO \nNevil KODIYAN \nJunyan LI \n</string>
+    <string name="about_sources">Quellen:</string>
+    <string name="about_sourcetext">Icons: icons8 \nUrl: https://icons8.com \nLizenz: CC BY-ND 3.0 \nInformationsquellen: Wikipedia \nUrl:https://en.wikipedia.org/wiki\nLizenz: CC BY-SA 3.0\n</string>
+    <string name="about_title">Über diese App</string>
+    <string name="about_updateversion">Letztes Update: 22-01-2017 \nProgrammversion: 1.0.1</string>
+    <string name="db_col_desc">desc_de</string>
+    <string name="db_col_name">name_de</string>
+    <string name="db_table_name">info_table</string>
+    <string name="text_about">Info</string>
+    <string name="text_gallery">Gallerie</string>
+    <string name="text_map">Karte</string>
+    <string name="db_name">garden_db.db</string>
+    <string name="welcome_string">Wilkommen bei der Großer Garten</string>
+    <string name="setEnglishLocale">Englisch</string>
+    <string name="setGermanLocale">Deutsch</string>
+    <string name="getGPSPosition">Such mich</string>
+</resources>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
+/* This activity shows the welcome splash screen */
 public class WelcomeActivity extends AppCompatActivity {
 
     @Override
